@@ -12,7 +12,6 @@ Revised: 1/1/2015
 """
 import requests
 
-
 class DelegationKeyPayload:
     """ Delegation Key Payload"""
     def __init__(self, algorithm, digest, ttl, digestType, keyTag):
@@ -318,7 +317,7 @@ class Arin:
             else:
                 return request.text
         except Exception as ex:
-            print "_api_query(%s) exception: %s" % (resource, ex)
+            print("_api_query(%s) exception: %s" % (resource, ex))
             return False
 
     def request_whowas_asn_report(self, asnumber):
