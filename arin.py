@@ -293,13 +293,13 @@ class Arin:
             headers = {'Content-Type': 'application/xml'}
 
             if return_type is "json":
-                headers.update({'Accept:': 'application/json'})
+                headers.update({'Accept': 'application/json'})
             elif return_type is "html":
-                headers.update({'Accept:': 'text/html'})
+                headers.update({'Accept': 'text/html'})
             elif return_type is "plain":
-                headers.update({'Accept:': 'text/plain'})
+                headers.update({'Accept': 'text/plain'})
             elif return_type is "xml":
-                headers.update({'Accept:': 'application/xml'})
+                headers.update({'Accept': 'application/xml'})
 
             if method is "GET":
                 request = requests.get("https://www.arin.net/rest%s?apikey=%s" % (resource, self.apikey), headers=headers)
